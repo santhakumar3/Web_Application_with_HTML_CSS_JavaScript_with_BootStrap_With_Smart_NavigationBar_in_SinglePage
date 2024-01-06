@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/register_styles.css">
+</head>
+<body>
+
+   
+
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <span id="usernameError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="role">Select a Role:</label>
+                <select class="form-control" id="role" name="role" required>
+                    <option value="" disabled selected>Select a Role</option>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                    <option value="guest">Guest</option>
+                </select>
+                <span id="roleError" class="error"></span>
+            </div>
+
+                
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span id="emailError" class="error"></span>
+            </div>
+    
+            <div class="form-group">
+                <label for="mobile">Mobile:</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+                <span id="mobileError" class="error"></span>
+            </div>
+    
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <span id="passwordError" class="error"></span>
+            </div>
+    
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <span id="confirmPasswordError" class="error"></span>
+            </div>
+    
+            <button type="button" href="#" onclick="register()">Register</button>
+            <button type="button" class="cancel" onclick="clearForm()">Cancel</button>
+
+            
+        </form>
+    
+        <div id="successMessage" class="success" style="display: none;">Successfully registered!</div>
+   
+   
+        <script src="../html/register_script.js"></script>
+
+    </div>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Items</title>
+    <link rel="stylesheet" href="../css/register_styles.css">
+</head>
+
+<body>
+
+    
+
+    <div class="container">
+        <h2>Add New Item </h2>
+        <form id="addItemForm">
+            <div class="form-group">
+                <label for="itemname">Item Name:</label>
+                <input type="text" id="itemname" name="itemname" required>
+                <span id="itemnameError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="itemcount">Item Count:</label>
+                <input type="number" id="itemcount" name="itemcount" required>
+                <span id="itemcountError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="itemprice">Item Price:</label>
+                <input type="number" id="itemprice" name="itemprice" required>
+                <span id="mobileError" class="error"></span>
+            </div>
+
+            
+            <button type="button" href="#"  onclick="additem()">Add Item</button>
+            <button type="button" class="cancel" onclick="clearForm()">Cancel</button>
+
+            
+        </form>
+
+        <div id="successMessage" class="success" style="display: none;">Item Added Successfully!</div>
+
+        <script src="../html/add_new_item.js"></script>
+
+    </div>
+
+
+
+</body>
+
+</html>
